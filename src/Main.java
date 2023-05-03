@@ -1,5 +1,15 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNextLine()) {
+            String line = sc.nextLine();
+            if(line.equals("")) {
+                continue;
+            }
+
+            String[] references = line.split(",");
+        }
     }
 }
