@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45d011e7-17eb-414d-8963-cdc6656b4468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Governor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MemoryFrame.java" afterDir="false" />
+    <list default="true" id="45d011e7-17eb-414d-8963-cdc6656b4468" name="Changes" comment="restart from the beginning :)&#10;I take the challenge">
+      <change afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Reference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PageManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +47,25 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="opre_hazi_lapcsere" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,10 +76,23 @@
       <updated>1683100441328</updated>
       <workItem from="1683100442898" duration="1000" />
       <workItem from="1683136176094" duration="2434000" />
+      <workItem from="1683225957919" duration="2048000" />
     </task>
+    <task id="LOCAL-00001" summary="restart from the beginning :)&#10;I take the challenge">
+      <created>1683228289212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683228289213</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="restart from the beginning :)&#10;I take the challenge" />
+    <option name="LAST_COMMIT_MESSAGE" value="restart from the beginning :)&#10;I take the challenge" />
   </component>
 </project>
