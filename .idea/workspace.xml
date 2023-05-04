@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45d011e7-17eb-414d-8963-cdc6656b4468" name="Changes" comment="restart from the beginning :)&#10;I take the challenge">
-      <change afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="45d011e7-17eb-414d-8963-cdc6656b4468" name="Changes" comment="basic stuff">
+      <change beforePath="$PROJECT_DIR$/src/Fifo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fifo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PageManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,7 @@
       <updated>1683100441328</updated>
       <workItem from="1683100442898" duration="1000" />
       <workItem from="1683136176094" duration="2434000" />
-      <workItem from="1683225957919" duration="2048000" />
+      <workItem from="1683225957919" duration="3230000" />
     </task>
     <task id="LOCAL-00001" summary="restart from the beginning :)&#10;I take the challenge">
       <created>1683228289212</created>
@@ -85,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683228289213</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basic stuff">
+      <created>1683229527448</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683229527448</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="restart from the beginning :)&#10;I take the challenge" />
-    <option name="LAST_COMMIT_MESSAGE" value="restart from the beginning :)&#10;I take the challenge" />
+    <MESSAGE value="basic stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic stuff" />
   </component>
 </project>
