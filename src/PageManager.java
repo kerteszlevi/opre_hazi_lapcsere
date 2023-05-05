@@ -105,10 +105,26 @@ public class PageManager {
                     if(frameX.getPageContainer().getLockedFor()!=0){
                         frozenCount++;
                     }else{
-
+                        //TODO
                     }
-                    if(frozenCount ==3)
+                    //nem tudjuk teljesíteni a kérést az összes lap foglalt.
+                    if(frozenCount ==frameList.size()){
+                        output_debug += "*";
+                        actionTookPlace = true;
+                    }
                 }
+            }
+
+            if(!actionTookPlace){
+                while(true){
+                    if(fifo.getFirst().getReferenced()){
+                        fifo.getFirst().setReferenced(false);
+                        fifo.addFrame(fifo.removeFirst());
+                        //output_debug += fifo.getFirst().getLetter()+page.getNumber()+" ";
+                        //pageFaults++;
+                    }else{
+                }
+
             }
 
 

@@ -15,4 +15,7 @@ public class Page {
     public void setLockedFor(int lockedFor){
         this.lockedFor = lockedFor;
     }
+    public void reduceLockedFor(){
+        this.lockedFor--;
+    }
 }
