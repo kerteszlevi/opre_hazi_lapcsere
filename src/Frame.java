@@ -1,12 +1,12 @@
 public class Frame {
     private boolean referenced;
     private char letter;
-    private Frame frameContainer;
+    private Page pageContainer;
 
     public Frame(char letter) {
         this.referenced = false;
         this.letter = letter;
-        this.frameContainer = null;
+        this.pageContainer = null;
     }
 
     public void setReferenced(boolean referenced){
@@ -17,7 +17,14 @@ public class Frame {
         return this.referenced;
     }
 
-    public void setFrame(Frame frame){
-        this.frameContainer = frame;
+    public void setPageContainer(Page page){
+        this.pageContainer = page;
+    }
+
+    public Page getPageContainer(){
+        return this.pageContainer;
+    }
+    public char getLetter(){
+        return this.letter;
     }
 }

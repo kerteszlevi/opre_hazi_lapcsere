@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45d011e7-17eb-414d-8963-cdc6656b4468" name="Changes" comment="basic stuff">
-      <change beforePath="$PROJECT_DIR$/src/Fifo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fifo.java" afterDir="false" />
+    <list default="true" id="45d011e7-17eb-414d-8963-cdc6656b4468" name="Changes" comment="basic stuff2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PageManager.java" afterDir="false" />
     </list>
@@ -44,6 +45,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -77,6 +79,8 @@
       <workItem from="1683100442898" duration="1000" />
       <workItem from="1683136176094" duration="2434000" />
       <workItem from="1683225957919" duration="3230000" />
+      <workItem from="1683230477829" duration="663000" />
+      <workItem from="1683263562832" duration="5414000" />
     </task>
     <task id="LOCAL-00001" summary="restart from the beginning :)&#10;I take the challenge">
       <created>1683228289212</created>
@@ -92,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683229527448</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="basic stuff2">
+      <created>1683231129588</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683231129588</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +112,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="restart from the beginning :)&#10;I take the challenge" />
     <MESSAGE value="basic stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic stuff" />
+    <MESSAGE value="basic stuff2" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic stuff2" />
   </component>
 </project>
