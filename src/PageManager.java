@@ -147,6 +147,6 @@ public class PageManager {
             //System.out.println(debug?output_debug:"");
         }
         System.out.println(debug?output_debug:output);
-        System.out.println(pageFaults);
+        System.out.print(pageFaults);
     }
 }
