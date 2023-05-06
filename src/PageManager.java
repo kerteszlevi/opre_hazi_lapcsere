@@ -2,17 +2,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.Math.abs;
+
 public class PageManager {
+    private boolean debug = false;
 
     private int pageFaults = 0;
     private String output_debug = "";
+    private String output = "";
     private int[] pageRequests;
     private Fifo fifo;
     private Frame frameA = new Frame('A');
     private Frame frameB = new Frame('B');
     private Frame frameC = new Frame('C');
     private boolean actionTookPlace = false;
-    private int frozenCount = 0;
+    private int frozenPageCount = 0;
 
     private List<Frame> frameList = new ArrayList<>();
     private List<Page> pageList = new ArrayList<>();
@@ -20,6 +24,7 @@ public class PageManager {
     //This is the constructor of the PageManager class.
     public PageManager() {
         this.pageRequests = new int[0];
+        this.fifo = new Fifo();
     }
 
     //this the readPageRequests function that takes input like this: 1,2,3,-1,5,-1
@@ -57,7 +62,7 @@ public class PageManager {
     //pageRequests array.
     public void populatePageList(){
         for (int i = 0; i < this.pageRequests.length; i++) {
-            Page page = new Page(this.pageRequests[i]);
+            Page page = new Page(abs(this.pageRequests[i]));
             pageList.add(page);
         }
     }
@@ -77,12 +82,13 @@ public class PageManager {
             //majd minden lapra végigmegyünk az elérhető frame-eken
             //megnézzük hogy a kért lap benne van-e már egy frame-ben.
             for(Frame frameX:frameList) {
-                if (page.getNumber() == frameX.getPageContainer().getNumber()) {
+                if (frameX.getPageContainer()!= null &&  page.getNumber() == frameX.getPageContainer().getNumber()) {
                     frameX.setReferenced(true);
                     if (frameX.getPageContainer().getLockedFor() != 0) {
                         frameX.getPageContainer().setLockedFor(0);
                     }
-                    output_debug += "-";
+                    output_debug += "-,";
+                    output += "-";
                     actionTookPlace = true;
                     break;
                 }
@@ -94,7 +100,8 @@ public class PageManager {
                         frameX.setPageContainer(page);
                         fifo.addFrame(frameX);
                         pageFaults++;
-                        output_debug += frameX.getLetter()+page.getNumber()+" ";
+                        output_debug += String.valueOf(frameX.getLetter())+page.getNumber()+",";
+                        output += String.valueOf(frameX.getLetter());
                         actionTookPlace = true;
                         break;
                     }
@@ -103,33 +110,40 @@ public class PageManager {
             if(!actionTookPlace){
                 for(Frame frameX:frameList){
                     if(frameX.getPageContainer().getLockedFor()!=0){
-                        frozenCount++;
+                        frozenPageCount++;
                     }else{
                         //TODO
                     }
                     //nem tudjuk teljesíteni a kérést az összes lap foglalt.
-                    if(frozenCount ==frameList.size()){
-                        output_debug += "*";
+                    if(frozenPageCount ==frameList.size()){
+                        output_debug += "*"+",";
+                        output += "*";
+                        pageFaults++;
                         actionTookPlace = true;
                     }
                 }
+                frozenPageCount = 0;
             }
-
-            if(!actionTookPlace){
-                while(true){
-                    if(fifo.getFirst().getReferenced()){
-                        fifo.getFirst().setReferenced(false);
-                        fifo.addFrame(fifo.removeFirst());
-                        //output_debug += fifo.getFirst().getLetter()+page.getNumber()+" ";
-                        //pageFaults++;
-                    }else{
+            while(!actionTookPlace){
+                if(fifo.getFirst().getReferenced()){
+                    fifo.getFirst().setReferenced(false);
+                    fifo.addFrame(fifo.removeFirst());
+                    //output_debug += fifo.getFirst().getLetter()+page.getNumber()+" ";
+                    //pageFaults++;
+                }else{
+                    Frame firstNotLockedFrame = fifo.removeFrame(fifo.getFirstNotLocked());
+                    output_debug += String.valueOf(firstNotLockedFrame.getLetter())+page.getNumber()+",";
+                    output += String.valueOf(firstNotLockedFrame.getLetter());
+                    firstNotLockedFrame.setPageContainer(page);
+                    fifo.addFrame(firstNotLockedFrame);
+                    pageFaults++;
+                    actionTookPlace = true;
                 }
-
             }
-
-
-
-
+            fifo.reduceLockedForFramesInFifo();
+            System.out.println(debug?output_debug:"");
         }
+        System.out.println(debug?output_debug:output);
+        System.out.print(pageFaults);
     }
 }

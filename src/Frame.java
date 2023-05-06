@@ -27,4 +27,8 @@ public class Frame {
     public char getLetter(){
         return this.letter;
     }
+
+    public String toString(){
+        return "letter:"+this.letter+" referenced:"+this.referenced+" pageContainer:"+this.pageContainer;
+    }
 }

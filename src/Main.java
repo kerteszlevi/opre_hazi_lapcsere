@@ -8,6 +8,6 @@ public class Main {
         //pm.printPageRequests();
         pm.populatePageList();
         //pm.printPageList();
-        //pm.run();
+        pm.run();
     }
 }
