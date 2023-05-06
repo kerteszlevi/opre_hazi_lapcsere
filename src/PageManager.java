@@ -21,15 +21,11 @@ public class PageManager {
     private List<Frame> frameList = new ArrayList<>();
     private List<Page> pageList = new ArrayList<>();
 
-    //This is the constructor of the PageManager class.
     public PageManager() {
         this.pageRequests = new int[0];
         this.fifo = new Fifo();
     }
-
-    //this the readPageRequests function that takes input like this: 1,2,3,-1,5,-1
-    //and stores it in the pageRequests array. It ignores new lines and empty lines and reads from the
-    //standard input until EOF.
+    //lapkérések beolvasása stdin-ről
     public void readPageRequests() {
         Scanner scanner = new Scanner(System.in);
         String input = "";
@@ -43,37 +39,44 @@ public class PageManager {
         }
         this.pageRequests = pageRequests;
     }
+    //lapok feltöltése átadott referenciabemenettel
+    public void loadPageRequests(int[] pageRequests){
+        this.pageRequests = pageRequests;
+    }
 
-    //this is the printPageRequests function that prints the pageRequests array.
+    //a bemeneti referenciatömböt írja ki stdout-ra
     public void printPageRequests() {
         for (int i = 0; i < this.pageRequests.length; i++) {
             System.out.print(this.pageRequests[i]+",");
         }
     }
 
-    //this is the printPageList function that prints the pageList.
+    //már feltöltött laptömb kiírása
     public void printPageList(){
         for (int i = 0; i < this.pageList.size(); i++) {
             System.out.print(this.pageList.get(i).getNumber()+",");
         }
     }
 
-    //this it the populatePageList function that initializes the pageList with the numbers from the
-    //pageRequests array.
+    //laptömb felöltése a bemeneti tömb alapján
     public void populatePageList(){
         for (int i = 0; i < this.pageRequests.length; i++) {
             Page page = new Page(abs(this.pageRequests[i]));
             pageList.add(page);
         }
     }
-
+    //kerettömb feltöltése 3 kerettel
     public void populateFrameList(){
         frameList.add(frameA);
         frameList.add(frameB);
         frameList.add(frameC);
     }
 
-    //this is the run function that runs the page swapping second change algorithm.
+    //output visszaadása teszteléshez
+    public String getOutput(){
+        return this.output;
+    }
+    //az algoritmust futtató run függvény
 
     public void run(){
         //végigmegyünk a lapokon amik a lapkéréseknek felelnek meg
@@ -141,9 +144,9 @@ public class PageManager {
                 }
             }
             fifo.reduceLockedForFramesInFifo();
-            System.out.println(debug?output_debug:"");
+            //System.out.println(debug?output_debug:"");
         }
         System.out.println(debug?output_debug:output);
-        System.out.print(pageFaults);
+        System.out.println(pageFaults);
     }
 }

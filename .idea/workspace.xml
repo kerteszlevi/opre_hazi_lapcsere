@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45d011e7-17eb-414d-8963-cdc6656b4468" name="Changes" comment="ezt még folytatnom kell erősen már a nagy része megvan2">
+    <list default="true" id="45d011e7-17eb-414d-8963-cdc6656b4468" name="Changes" comment="A kiadott tesztesetekre működik(1)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fifo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fifo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PageManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,18 +54,14 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="opre_hazi_lapcsere" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -82,7 +76,7 @@
       <workItem from="1683225957919" duration="3230000" />
       <workItem from="1683230477829" duration="663000" />
       <workItem from="1683263562832" duration="7351000" />
-      <workItem from="1683356921336" duration="7180000" />
+      <workItem from="1683356921336" duration="12017000" />
     </task>
     <task id="LOCAL-00001" summary="restart from the beginning :)&#10;I take the challenge">
       <created>1683228289212</created>
@@ -119,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683270883755</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="A kiadott tesztesetekre működik(1)">
+      <created>1683364506511</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683364506511</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,20 +132,30 @@
     <MESSAGE value="basic stuff2" />
     <MESSAGE value="ezt még folytatnom kell erősen már a nagy része megvan" />
     <MESSAGE value="ezt még folytatnom kell erősen már a nagy része megvan2" />
-    <option name="LAST_COMMIT_MESSAGE" value="ezt még folytatnom kell erősen már a nagy része megvan2" />
+    <MESSAGE value="A kiadott tesztesetekre működik(1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="A kiadott tesztesetekre működik(1)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="3" />
+          <line>23</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/PageManager.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>17</line>
+          <properties class="Main" method="test1">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
